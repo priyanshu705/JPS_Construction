@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JPS Construction | Quality Construction & Building Services</title>
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=70&auto=format&fit=crop" fetchpriority="high">
 <meta name="description" content="JPS Construction delivers professional construction, renovation, remodeling, and project management solutions with a focus on quality, reliability, and precision.">
 <meta name="theme-color" content="#0B1F3A">
 <meta property="og:title" content="JPS Construction | Building With Purpose. Delivering With Precision.">
@@ -41,13 +42,13 @@ img{max-width:100%}.font-display{font-family:Oswald,sans-serif}
 .blueprint-d{background-image:linear-gradient(rgba(11,31,58,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(11,31,58,.06) 1px,transparent 1px);background-size:44px 44px}
 .card-lift{transition:.3s}.card-lift:hover{transform:translateY(-6px);box-shadow:0 22px 48px rgba(11,31,58,.16)}
 .svc-img{transition:transform .7s ease}.group:hover .svc-img{transform:scale(1.06)}
-.hero-bg{will-change:transform;transform:translateZ(0);-webkit-transform:translateZ(0);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.hero-bg{position:absolute;inset:0;transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);will-change:transform;isolation:isolate;contain:paint;background:#0B1F3A}
 .reveal{opacity:1;transform:none}
 .hero-enter{opacity:0;transform:translateY(26px);animation:hu .9s ease forwards}@keyframes hu{to{opacity:1;transform:none}}
 .field{width:100%;max-width:100%;border:1px solid #D9DEE6;border-radius:2px;padding:.9rem 1rem;font-size:.95rem;background:#fff;color:#181C22;font-family:Inter,Arial,sans-serif}
 .field:focus{outline:2px solid #2E9E4A;outline-offset:1px}
 .flabel{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0B1F3A;margin-bottom:.45rem;display:block}
-.mobile-panel{transform:translateY(-10px);opacity:0;pointer-events:none;transition:.28s}.mobile-panel.open{transform:none;opacity:1;pointer-events:auto}
+.mobile-panel{position:absolute;top:100%;left:0;right:0;max-height:calc(100dvh - 72px);overflow-y:auto;transform:translateY(-10px);opacity:0;pointer-events:none;transition:.28s}.mobile-panel.open{transform:none;opacity:1;pointer-events:auto}
 :focus-visible{outline:3px solid #2E9E4A;outline-offset:2px}
 #mobileCTA{transition:opacity .2s ease}
 @media(max-width:1023px){footer{padding-bottom:84px}}
@@ -79,8 +80,19 @@ img{max-width:100%}.font-display{font-family:Oswald,sans-serif}
 </div>
 </header>
 <main id="home">
-<section class="relative overflow-hidden bg-navy text-white pt-[72px] lg:pt-20">
-<div class="absolute inset-0 hero-bg"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800&q=80&auto=format&fit=crop" alt="Modern architectural construction by JPS Construction" class="w-full h-full object-cover" fetchpriority="high" decoding="async"></div>
+<section class="relative overflow-hidden bg-navy text-white pt-[72px] lg:pt-20" style="isolation:isolate;contain:layout paint">
+<div class="absolute inset-0 hero-bg">
+<img
+  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=70&auto=format&fit=crop"
+  srcset="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=65&auto=format&fit=crop 800w,
+          https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=70&auto=format&fit=crop 1200w,
+          https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1800&q=75&auto=format&fit=crop 1800w"
+  sizes="100vw"
+  alt="Modern architectural construction by JPS Construction"
+  class="w-full h-full object-cover"
+  fetchpriority="high"
+  decoding="async">
+</div>
 <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32 min-h-[92dvh] flex items-center">
 <div class="max-w-3xl w-full">
 <p class="hero-enter eyebrow eyebrow-line text-white/80" style="animation-delay:.05s">JPS Construction</p>
